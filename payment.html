@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payment Options</title>
+    <style>
+        .payment-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .payment-option {
+            margin: 10px;
+            padding: 10px;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .payment-option img {
+            width: 30px;
+            margin-right: 10px;
+        }
+
+        .pop-up {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            display: none;
+            z-index: 999;
+        }
+
+        .pop-up h2 {
+            margin-top: 0;
+        }
+
+        .pop-up p {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="payment-container">
+        <div class="payment-option" id="phonepe-option">
+            <img src="images/phone pe.png" alt="PhonePe">
+            <span>PhonePe</span>
+        </div>
+        <div class="payment-option" id="googlepay-option">
+            <img src="images/googleplay.jpg" alt="Google Pay">
+            <span>Google Pay</span>
+        </div>
+        <div class="payment-option" id="paytm-option">
+            <img src="images/Paytm_Logo.jpg" alt="Paytm">
+            <span>Paytm</span>
+        </div>
+    </div>
+
+    <div class="pop-up" id="pop-up-message">
+        <h2>Payment Option Selected</h2>
+        <p id="selected-payment-option"></p>
+    </div>
+
+    <script>
+        const phonepeOption = document.getElementById('phonepe-option');
+        const googlepayOption = document.getElementById('googlepay-option');
+        const paytmOption = document.getElementById('paytm-option');
+        const popUpMessage = document.getElementById('pop-up-message');
+        const selectedPaymentOption = document.getElementById('selected-payment-option');
+
+        phonepeOption.addEventListener('click', () => {
+            showPopUp('PhonePe');
+        });
+
+        googlepayOption.addEventListener('click', () => {
+            showPopUp('Google Pay');
+        });
+
+        paytmOption.addEventListener('click', () => {
+            showPopUp('Paytm');
+        });
+
+        function showPopUp(paymentOption) {
+            selectedPaymentOption.textContent = paymentOption;
+            popUpMessage.style.display = 'block';
+
+            setTimeout(() => {
+                popUpMessage.style.display = 'none';
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
+
+

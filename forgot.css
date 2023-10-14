@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url(images/footer-bg.jpg);
+}
+.container{
+   
+     margin: 200px;
+}
+.box{
+    /* border: 2px solid rosybrown; */
+    width: 50%;
+    height: 224px;
+    /* height: 81%; */
+    margin: auto;
+    /* display: contents; */
+    display: grid;
+    justify-content: center;
+    align-items: center; 
+    color: white;
+}  
+.sum {
+    padding-left: 61px;
+    font-size: 18px;
+    margin-bottom: 25px;
+} 
+.email {
+    padding-left: 92px;
+    font-size: 20px;
+}
+.mobile {
+    padding-left: 62px;
+    font-size: 18px;
+}
+.max{
+    margin-top: 1px;
+    margin-bottom: 17px;
+    font-size: 41px;
+    padding-left: 19px;
+}
+.min{
+    padding-bottom: 13px;
+}
+.op{
+    padding-top: 5px;
+}
+input{
+    width: 203px;
+    height: 22px;
+    border-radius: 5px;
+    padding-left: 9px;
+}
+button{
+    margin: 5px;
+    width: 155px;
+}
+.color{
+    color: rgb(244, 148, 68);
+}
+.btn{
+    margin-bottom: 25px;
+    margin-left: 57px;
+    margin-top: 23px;
+    padding-left: -9px;
+    width: 322px;
+    height: 34px;
+    border-radius: 8px;
+}
+button:hover{
+    /* color: aqua; */
+    background: rgb(244, 148, 68);
+}
+.email:hover{
+    color: crimson;
+}
+.mobile:hover{
+    color: crimson;
+}
+input:hover{
+   
+    background: rgb(140, 235, 203);
+}

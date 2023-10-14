@@ -1,0 +1,49 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cryptocurrency Tracker</title>
+  <link rel="stylesheet" type="text/css" href="setting.css">
+</head>
+<body>
+  <header>
+    <h1>Cryptocurrency Tracker</h1>
+  </header>
+  
+  <div id="content">
+    <h2>Settings</h2>
+    <form id="settings-form">
+      <label for="currency">Currency:</label>
+      <select id="currency" name="currency">
+        <option value="usd">USD</option>
+        <option value="eur">EUR</option>
+        <option value="btc">BTC</option>
+        <!-- Add more currency options here -->
+      </select>
+      
+      <label for="theme">Theme:</label>
+      <select id="theme" name="theme">
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+      </select>
+      
+      <div class="checkbox-container">
+        <input type="checkbox" id="privacy-checkbox" name="privacy-checkbox">
+        <label for="privacy-checkbox">Enable Privacy Mode</label>
+      </div>
+      
+      <button type="submit" id="sub">Save Settings</button>
+    </form>
+    
+    <h2>Privacy Options</h2>
+    <div id="privacy-options">
+      <p>Privacy Mode is currently <span id="privacy-status">disabled</span>.</p>
+      <p>Privacy options description goes here...</p>
+      <img src="images/privacy.png" alt="Privacy Guidelines">
+    </div>
+  </div>
+   
+  <script src="setting.js"></script>
+</body>
+</html>

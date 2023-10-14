@@ -1,0 +1,106 @@
+body{
+    background-image: linear-gradient(to bottom,transparent 0%,rgba(10, 99, 166, 0.65) 100%),url(nbg.jpg);
+    background-image: url(images/b14.jpg);
+    
+    background-size: 600px;
+    background-repeat: no-repeat;
+    height: 610px;
+    background-size: cover;
+    background-position: absolute;
+    font-family: "Fira Sans", Helvetica, Arial, sans-serif;
+    
+}
+/* .alert{
+  background-color: rgb(57, 156, 123);
+
+} */
+.containers{
+    margin: 20px 0px 0px 459px;
+    background-size: 790px;
+    padding: auto;
+    height: 525px;
+    width: 400px;
+    background-image: linear-gradient(rgb(184 245 255 / 46%),rgb(87 166 245 / 45%)),url(nbg.jpg);
+    border-radius: 10px;
+
+}
+
+h2{
+    margin-left: 150px;
+    font-weight: bolder;
+    /* background-image: linear-gradient(182deg,#000000,#57576a); */
+    /* -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+}
+form{
+	border-radius: 10px 5px;
+	position: relative;
+	overflow: hidden;
+    line-height: 30px;
+    margin-left: 5px;
+    padding-left: 10px;
+    color: #000000;
+
+}
+label{
+    margin-left: 10px;
+}
+input{
+    border-radius: 12px 4px;
+    border-color: #654f9e;
+    height: 30px;
+    background-color: rgba(33, 32, 32, 0);
+}
+.sign button{
+    margin-top: 8px;
+    margin-bottom: 10px;
+    margin-left: 145px;
+    border-radius: 10px 5px;
+    height: 30px;
+    width: 100px;
+    color: #201c1c;
+}
+.terms{
+    margin-left: 70px;
+}
+.terms strong{
+    color: red;
+}
+::placeholder{
+    color:black;
+}
+.sign button:hover{
+    background-color: #000000;
+    color: rgb(78, 151, 220);
+ }
+ a{
+    text-decoration: none;
+    margin-left: 130px;
+    color: rgb(31, 11, 184);
+ }
+ a:hover{
+    color:rgb(19, 5, 125) ;
+    text-decoration: underline;
+ }
+ #done{
+    width:560px;
+    background-color: rgb(159, 212, 159);
+    margin-top: -8px;
+ }
+ #danger{
+    width:247px;
+    background-color: rgba(249, 27, 27, 0.853);
+    margin-left: 80px;
+    margin-top: -9px;
+    
+ }
+#error{
+    font-size: 15px;
+    margin-left: 115px;
+    font-family: fangsong;
+    color: #d12e4e;
+}
+.termscheckbox{
+    margin-left: 5px;
+
+}

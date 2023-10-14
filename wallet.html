@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cryptocurrency Wallet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-left: 350px;
+            /* padding-right: 100px; */ 
+            color: rgb(225, 232, 238);
+            
+            width: 50%;
+            height: 50%;
+            background-image: url(images/header-bg-1.png);
+            /* background-image: url(images/app-banner.png); */
+
+            background-repeat: no-repeat;
+            /* background-image: url(images/app-banner.png); */
+            /* for that image */
+            /* color: rgb(10, 10, 11);
+             background-color: #a1c5b8;
+             padding-left: 450px;
+            background-image: url(images/app-banner.png);
+            background-repeat: no-repeat;  */
+        }
+
+        .container {
+            margin-top: 33px;
+            
+                /* margin-top: 285px;
+                margin-right: -342px;
+                 color: black; */
+            
+            /* border: 2px solid rebeccapurple; */
+            /* margin: auto; */
+            /* display: flex; */
+            /* justify-content: center;
+            align-items: center; */
+            /* padding-left: 210px; 
+            color: black; */
+        }
+
+        .balance {
+            font-size: 31px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .input-container {
+            margin-bottom: 10px;
+        }
+
+        .input-container label {
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        .input-container input {
+            width: 200px;
+            padding: 10px;
+            border-radius: 7px;
+        }
+
+        .button {
+            padding: 13px 52px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .payment-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 8vh;
+        }
+
+        .payment-option {
+            margin: 10px;
+            padding: 10px;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            color: black;
+        }
+
+        .payment-option img {
+            width: 30px;
+            margin-right: 10px;
+        }
+        #googlepay-option {
+            width: 141px;
+            height: 17px;
+        }
+        #phonepe-option{
+            width: 141px;
+            height: 17px;
+        }
+        #paytm-option{
+            width: 141px;
+            height: 17px;
+        }
+        .pop-up {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            display: none;
+            z-index: 999;
+        }
+
+        .pop-up h2 {
+            margin-top: 0;
+        }
+
+        .pop-up p {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cryptocurrency Wallet</h1>
+        <div class="balance" id="balance">Balance: 0</div>
+
+        <div class="input-container">
+            <label for="deposit">Deposit Amount:</label>
+            <input type="number" id="deposit" placeholder="Enter deposit amount">
+            <!-- <button class="button" onclick="deposit()">Deposit</button> -->
+        </div>
+
+        <div class="input-container">
+            <label for="withdraw">Withdraw Amount:</label>
+            <input type="number" id="withdraw" placeholder="Enter withdraw amount">
+            <!-- <button class="button" onclick="withdraw()">Withdraw</button> -->
+        </div>
+        <div class="payment-container">
+            <div class="payment-option" id="phonepe-option">
+                <img src="images/phone pe.png" alt="PhonePe">
+                <span>PhonePe</span>
+            </div>
+            <div class="payment-option" id="googlepay-option">
+                <img src="images/googleplay.jpg" alt="Google Pay">
+                <span>Google Pay</span>
+            </div>
+            <div class="payment-option" id="paytm-option">
+                <img src="images/Paytm_Logo.jpg" alt="Paytm">
+                <span>Paytm</span>
+            </div>
+        </div>
+    
+        <div class="pop-up" id="pop-up-message">
+            <h2>Payment Option Selected</h2>
+            <p id="selected-payment-option"></p>
+        </div>
+       
+
+         <button class="button" onclick="deposit()">Deposit</button>
+        <button class="button" onclick="withdraw()">Withdraw</button>
+    </div>
+ 
+    <script>
+        let balance = 0;
+
+        function updateBalance() {
+            const balanceElement = document.getElementById('balance');
+            balanceElement.textContent = `Balance: ${balance}`;
+        }
+
+        function deposit() {
+            const depositAmount = parseInt(document.getElementById('deposit').value);
+            if (!isNaN(depositAmount) && depositAmount > 0) {
+                balance += depositAmount;
+                updateBalance();
+                alert(`Successfully deposited ${depositAmount} into your wallet.`);
+            } else {
+                alert('Invalid deposit amount. Please enter a valid number.');
+            }
+        }
+
+        function withdraw() {
+            const withdrawAmount = parseInt(document.getElementById('withdraw').value);
+            if (!isNaN(withdrawAmount) && withdrawAmount > 0 && withdrawAmount <= balance) {
+                balance -= withdrawAmount;
+                updateBalance();
+                alert(`Successfully withdrawn ${withdrawAmount} from your wallet.`);
+            } else {
+                alert('Invalid withdraw amount. Please enter a valid number or check your balance.');
+            }
+        }
+
+        // Initial balance update
+        updateBalance();
+        const phonepeOption = document.getElementById('phonepe-option');
+        const googlepayOption = document.getElementById('googlepay-option');
+        const paytmOption = document.getElementById('paytm-option');
+        const popUpMessage = document.getElementById('pop-up-message');
+        const selectedPaymentOption = document.getElementById('selected-payment-option');
+
+        phonepeOption.addEventListener('click', () => {
+            showPopUp('PhonePe');
+        });
+
+        googlepayOption.addEventListener('click', () => {
+            showPopUp('Google Pay');
+        });
+
+        paytmOption.addEventListener('click', () => {
+            showPopUp('Paytm');
+        });
+
+        function showPopUp(paymentOption) {
+            selectedPaymentOption.textContent = paymentOption;
+            popUpMessage.style.display = 'block';
+            popUpMessage.style.color = 'black';
+
+            setTimeout(() => {
+                popUpMessage.style.display = 'none';
+            }, 3000);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>Cryptocurrency Portfolio</title>
+  <link rel="stylesheet" type="text/css" href="port.css">
+</head>
+<body>
+  
+  <h1 id="cry">Cryptocurrency Portfolio</h1>
+  <div class="container">
+  <form id="portfolioForm">
+    <label for="coinName">Coin Name:</label>
+    <input type="text" id="coinName" required>
+    <label for="quantity">Quantity:</label>
+    <input type="number" id="quantity" required>
+    <label for="price">Price:</label>
+    <input type="number" id="price" required>
+    
+    <button type="submit" id="btn">Add to Portfolio</button>
+  </form>
+  <div id="portfolioContainer">
+    <h2 id="py">PortFolio</h2>
+    <ul id="portfolioList"></ul>
+  </div>
+</div>  
+  <script src="port.js"></script>
+
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Crypto Portfolio</title>
+  <link rel="stylesheet" type="text/css" href="port.css">
+</head>
+<body>
+  <!-- <h1 id="cv">Crypto Portfolio</h1> -->
+  <!-- <div class="hei"> -->
+  <div id="portfolio" class="by">
+    <h2 id="my">My Portfolio</h2>
+    <div id="coin-list">
+      <!-- Coins will be dynamically added here -->
+    </div>
+    <!-- <div class="by"> -->
+    <h1>Buy Coin</h1>
+    <form id="buy-form">
+      <p>Coin Name: <input type="text" id="buy-coin" placeholder="Coin symbol (e.g., BTC)"></p>
+      <p>Quantity: <input type="number" name="price" id="buy-quantity" placeholder="Quantity"></p>
+      <!-- <input type="number" id="buy-quantity" placeholder="Quantity"> -->
+      <!-- <label for="price">Price:</label> -->
+      <p>Price: <input type="number" name="price" id="p" placeholder="Price"></p>
+      <!-- <input type="number" id="price" required> -->
+      <button type="submit" id="buy-btn">Buy</button>
+
+     
+      
+    </form>
+    <div class="sel">
+    <h1>Sell Coin</h1>
+    <form id="sell-form">
+      <p>Coin Name:<input type="text" id="sell-coin" placeholder="Coin symbol (e.g., BTC)"></p>
+      <p>Quantity:<input type="number" id="sell-quantity" placeholder="Quantity"></p>
+      <p>Price: <input type="number" name="price" id="x" placeholder="Price"></p>
+      <button type="submit" id="sell-btn">Sell</button>
+    </form>
+  </div>
+  </div>
+<!-- </div> -->
+  <div id="history">
+    <h2 id="tran">Transaction History</h2>
+    <ul id="transaction-list">
+      <!-- Transactions will be dynamically added here -->
+    </ul>
+  </div>
+<!-- </div>   -->
+  <script src="port.js"></script>
+</body>
+</html>

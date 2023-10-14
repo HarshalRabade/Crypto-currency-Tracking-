@@ -1,0 +1,199 @@
+/* body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-image: url(images/f3.jpg)
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    /* height: 300px; */
+
+  
+  
+  /* h1 {
+    text-align: center;
+  }
+  
+  form {
+    margin-bottom: 20px;
+  }
+  
+
+  form label, form input {
+    display: block;
+    margin-bottom: 10px;
+    width: 225px;
+    height: 25px;
+    font-size: 21px;
+    border-radius: 10px;
+  }
+  
+  #portfolioContainer {
+    margin-top: 50px;
+  }
+  
+  #portfolioList {
+    list-style-type: none;
+    padding: 0;
+    height: 180px;
+
+  }
+  
+  #portfolioList li {
+    margin-bottom: 10px;
+    color: #58d6a5;
+    font-size: 22px;
+  }
+  .container{
+   margin-left: 590px;
+  }
+  #btn {
+    width: 280px;
+    height: 41px;
+    background: #c68817;
+    margin-top: 19px;
+    border-radius: 18px;
+    font-size: 17px;
+    color: white;
+    margin-left: -30px;
+}
+#cry{
+    font-size: 34px;
+    margin-top: 100px;
+    color: burlywood;
+}
+#py
+{
+    font-size: 50px;
+    color: #fdfbf5;
+
+} */
+   
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-image: url(images/f3.jpg); 
+  background-size: cover;
+  background-repeat: no-repeat;  
+   
+}
+
+/* .hei{
+  border: 2px solid orchid;
+} */
+h1, h2, h3 {
+  color: #333;
+}
+#cv{
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+}
+#my{
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 401px;
+  margin-bottom: 41px;
+  margin-top: -70px;
+  font-size: 65px;
+  color: #d4a54d;
+}
+.by{
+
+    /* border: 2px solid orange; */
+    height: 341px;
+    padding-left: 510px;
+    margin-top: 130px;
+
+  /* margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+.sel {
+  /* display: flex; */
+  margin-left: 321px;
+  margin-top: -236px;
+}
+#portfolio {
+  margin-bottom: 30px;
+}
+
+
+#coin-list {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+form input {
+  margin-right: 10px;
+  width: 153px;
+  height: 17px;
+}
+
+#history {
+  /* border-top: 1px solid #333; */
+  padding-top: 20px;
+}
+
+#transaction-list li {
+  margin-bottom: 10px;
+  margin-left: 478px;
+  color: white;
+  font-size: 30px;
+}
+#buy-btn{
+  width: 271px;
+  height: 28px;
+  font-size: 16px;
+  border-radius: 5px;
+  background: rgb(142 232 142);
+  
+}
+#buy-btn:hover{
+  background: orange;
+}
+#sell-btn{
+  width: 266px;
+  font-size: 16px;
+  height: 28px;
+  border-radius: 5px;
+  background: rgb(142 232 142);
+}
+#sell-btn:hover{
+  background: orange;
+}
+#buy-quantity{
+  width: 154px;
+  margin-left: 25px;
+}
+#p{ 
+  width: 158px;
+  margin-left: 50px;
+}
+p{
+  font-size: 20px;
+}
+#sell-coin{
+  margin-left: 5px;
+ 
+}
+#sell-quantity{
+  margin-left: 28px;
+}
+#x{
+  margin-left: 48px;
+}
+#tran{
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 50px;
+  color: white;
+  }
